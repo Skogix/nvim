@@ -1,40 +1,3 @@
---[[
--- TODO:
- - [ ] :help
- - [ ] :help modeline
- - [ ] :checkhealth
-  - luarocks
-  - npm
-  - perl
-  - ruby
-  - python
- - [ ] xclip
- - [ ] fix todo-manager/todo workflow
- - [ ] markdown
- - [ ] nvim-orgmode
- - [ ] neo-tree '-' -> ../
- - [ ] keybinds
-  - WARNING conflicting keymap exists for mode **"n"**, lhs: **"gb"**
-  - rhs: `<Plug>(comment_toggle_blockwise)`
-  - WARNING conflicting keymap exists for mode **"n"**, lhs: **"gc"**
-  - rhs: `<Plug>(comment_toggle_linewise)`
-  - WARNING conflicting keymap exists for mode **"n"**, lhs: **"sF"**
-  - rhs: ` `
-  - WARNING conflicting keymap exists for mode **"n"**, lhs: **"sd"**
-  - rhs: ` `
-  - WARNING conflicting keymap exists for mode **"n"**, lhs: **"sh"**
-  - rhs: ` `
-  - WARNING conflicting keymap exists for mode **"n"**, lhs: **"sf"**
-  - rhs: ` `
-  - WARNING conflicting keymap exists for mode **"n"**, lhs: **"sr"**
-  - rhs: ` `
- - [ ] dmenu / vad den nu hette
- - [ ] https://sw.kovidgoyal.net/kitty/overview/
-
-https://github.com/knubie/vim-kitty-navigator
-https://github.com/folke/trouble.nvim
---]]
-
 -- Set <space> as the leader key
 -- See `:help mapleader`
 vim.g.mapleader = ' '
@@ -49,11 +12,17 @@ require 'options'
 -- [[ Basic Keymaps ]]
 require 'keymaps'
 
+-- [[ Basic Autocommands ]]
+require 'autocommands'
+
 -- [[ Install `lazy.nvim` plugin manager ]]
 require 'lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
+
+-- [[ skogix mappings ]]
+require 'skogix.mappings'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
