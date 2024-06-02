@@ -5,9 +5,9 @@ return {
     opts = {--[[ things you want to change go here]]
     },
     -- cmd = 'Neotree',
-    keys = {
-      { '<leader>t', ':ToggleTerm direction=float<CR>', { desc = 'ToggleTerm' } },
-    },
+    -- keys = {
+    --   { '<leader>t', ':ToggleTerm direction=float<CR>', { desc = 'ToggleTerm' } },
+    -- },
   },
   {
     'ryanmsnyder/toggleterm-manager.nvim',

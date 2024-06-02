@@ -9,17 +9,17 @@ return {
     'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
     'MunifTanjim/nui.nvim',
   },
-  cmd = 'Neotree',
-  keys = {
-    { '<leader>e', ':Neotree reveal<CR>', { desc = 'neotree' } },
-  },
-  opts = {
-    filesystem = {
-      window = {
-        mappings = {
-          ['<leader>e'] = 'close_window',
-        },
-      },
-    },
-  },
+  -- cmd = 'Neotree',
+  -- keys = {
+  --   { '<leader>e', ':Neotree reveal<CR>', { desc = 'neotree' } },
+  -- },
+  -- opts = {
+  --   filesystem = {
+  --     window = {
+  --       mappings = {
+  --         ['<leader>e'] = 'close_window',
+  --       },
+  --     },
+  --   },
+  -- },
 }
