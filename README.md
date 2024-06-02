@@ -44,6 +44,8 @@ z -
 
 <!-- TODO: -->
 ## TODO
+- [ ] https://github.com/rmagatti/session-lens
+- [ ] https://github.com/rmagatti/auto-session
 - [ ] keymap gitsigns
 - [ ] gitsigns
 - [ ] markdown
