@@ -2,6 +2,7 @@
 
 <!-- TODO: -->
 ## TODO
+- [ ] https://github.com/ellisonleao/glow.nvim
 - [ ] https://github.com/rmagatti/session-lens
 - [ ] https://github.com/rmagatti/auto-session
 - [ ] keymap gitsigns
