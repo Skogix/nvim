@@ -106,6 +106,7 @@ return {
           { name = 'luasnip' },
           { name = 'path' },
           { name = 'orgmode' },
+          { name = 'vimwiki-tags' },
         },
       }
     end,

@@ -111,7 +111,7 @@ return {
   r = { name = 'refactor' },
   l = { name = 'lsp' },
   d = { name = 'debug' },
-  t = { '<cmd>ToggleTerm direction=float<cr>', 'ToggleTerm' },
+  -- t = { '<cmd>ToggleTerm direction=float<cr>', 'ToggleTerm' },
   ['T'] = { name = 'toggle' },
   m = { name = 'macro/markdown' },
   n = { name = 'notifications' },
@@ -127,6 +127,25 @@ return {
     name = 'git',
     l = { '<cmd>LazyGit<cr>', 'LazyGit' },
     f = { '<cmd>Telescope find_files<cr>', 'Find File' }, -- create a binding with label
+  },
+  t = {
+    name = 'task',
+    b = { name = 'b' },
+    c = { name = 'c' },
+    G = { name = 'b' },
+    h = { name = 'b' },
+    o = { name = 'todo', d = { name = 'todo' } },
+    ['odo'] = { '<cmd>:e /home/skogix/org/todo.md<cr>', 'todo' },
+    ['oado'] = { '<cmd>:e /home/skogix/org/todo.md<cr>', 'todo' },
+  },
+  w = {
+    name = 'wiki',
+    w = { '<cmd>VimwikiIndex<cr><cmd>VimwikiGenerateLinks<cr><cmd>VimwikiGenerateTagLinks<cr>', 'wiki' },
+    u = { '<cmd>VimwikiMakeDiaryNote<cr>', 'update todays diary' },
+    i = { '<cmd>VimwikiDiaryIndex<cr><cmd>VimwikiDiaryGenerateLinks<cr>', 'diary index' },
+    n = { '<cmd>VimwikiGoto<cr>', 'new note' },
+    s = { '<cmd>Telescope vimwiki<cr>', 'search' }, -- create a binding with label
+    f = { name = 'file', r = { '<cmd>VimwikiRenameFile<cr>', 'rename' }, d = { '<cmd>VimwikiDeleteFile<cr>', 'delete' } },
   },
 }
 -- }}}
