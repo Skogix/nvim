@@ -26,3 +26,5 @@
 - [ ] https://sw.kovidgoyal.net/kitty/overview/
 - [ ] https://github.com/knubie/vim-kitty-navigator
 - [ ] https://github.com/folke/trouble.nvim
+- [ ] https://github.com/nvim-orgmode/orgmode/blob/master/DOCS.md#getting-started-with-orgmode
+- [ ] https://github.com/nvim-orgmode/orgmode/wiki/Getting-Started#nvim-orgmode-tutorial
