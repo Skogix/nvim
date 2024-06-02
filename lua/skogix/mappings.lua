@@ -111,7 +111,7 @@ return {
   r = { name = 'refactor' },
   l = { name = 'lsp' },
   d = { name = 'debug' },
-  t = { '<cmd>ToggleTerm direction=float<cr>', 'ToggleTerm' },
+  -- t = { '<cmd>ToggleTerm direction=float<cr>', 'ToggleTerm' },
   ['T'] = { name = 'toggle' },
   m = { name = 'macro/markdown' },
   n = { name = 'notifications' },
@@ -128,5 +128,7 @@ return {
     l = { '<cmd>LazyGit<cr>', 'LazyGit' },
     f = { '<cmd>Telescope find_files<cr>', 'Find File' }, -- create a binding with label
   },
+  t = { name = 'task', ['odo'] = { '<cmd>:e /home/skogix/org/todo.md<cr>', 'todo' } },
+  w = { name = 'wiki' },
 }
 -- }}}
