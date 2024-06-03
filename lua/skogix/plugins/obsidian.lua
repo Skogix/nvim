@@ -26,7 +26,7 @@ return {
     workspaces = {
       {
         name = 'org',
-        path = '~/org',
+        path = '~/org/skogix',
       },
       {
         name = 'work',
