@@ -39,7 +39,13 @@ return {
             -- }, {})
             -- Map all the below keybinds only when the "norg" mode is active
             keybinds.map('norg', 'n', 'sk', '<cmd>Neorg keybind all<cr>', { desc = 'neorg' })
-            keybinds.map('norg', 'n', '<localleader>c', '<cmd>Neorg index<cr><cmd>Neorg inject-metadata<cr>', { desc = '[neorg] create note' })
+            keybinds.map(
+              'norg',
+              'n',
+              '<localleader>c',
+              '<cmd>Neorg keybind all core.dirman.new.note<cr><cmd>Neorg inject-metadata<cr>',
+              { desc = '[neorg] create note' }
+            )
             keybinds.map(
               'norg',
               'n',
