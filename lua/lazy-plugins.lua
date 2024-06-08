@@ -22,6 +22,14 @@ require('lazy').setup({
   --  This is equivalent to:
   --    require('Comment').setup({})
 
+  -- {
+  --   'gregorias/nvim-mapper',
+  --   dependencies = 'nvim-telescope/telescope.nvim',
+  --   config = function()
+  --     require('nvim-mapper').setup {}
+  --   end,
+  -- },
+
   -- "gc" to comment visual regions/lines
   { 'numToStr/Comment.nvim', opts = {} },
 

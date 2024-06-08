@@ -22,7 +22,9 @@ require 'lazy-bootstrap'
 require 'lazy-plugins'
 
 -- [[ skogix mappings ]]
-require 'skogix.mappings'
+-- require 'skogix.mappings'
+--
+require 'skogix.mappings2'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

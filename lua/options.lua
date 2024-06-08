@@ -3,11 +3,16 @@
 -- NOTE: You can change these options as you wish!
 --  For more options, you can see `:help option-list`
 
+vim.opt.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldtext = 'v:lua.vim.treesitter.foldtext()'
+vim.opt.foldlevelstart = 2
+-- vim.cmd 'syntax off'
+
 -- Basics for vimwiki
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
-vim.opt.conceallevel = 1 -- so that I can see `` and full urls in markdown files
+vim.opt.conceallevel = 2
 
 -- Make line numbers default
 vim.opt.number = true
