@@ -31,14 +31,6 @@ return {
         'z=',
       },
     }
-
-    local opts = {
-      prefix = '<leader>',
-    }
-
-    local binds = require 'skogix.mappings'
-
-    which_key.register(binds, opts)
   end,
 }
 -- vim: ts=2 sts=2 sw=2 et

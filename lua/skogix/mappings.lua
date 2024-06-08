@@ -1,5 +1,27 @@
+--
+-- vim.cmd 'autocmd FileType norg WhichKeyNorg()'
+-- function WhichKeyNorg()
+--   wkl.register({
+--     ['w'] = { ':w<CR>', 'write' },
+--     ['q'] = { ':q<CR>', 'quit' },
+--   }, { prefix = '<localleader>' })
+-- end
+
+-- -- The same using nvim-mapper
+-- Mapper = require 'nvim-mapper'
+--
+-- -- For Neovim < v0.7.0
+-- Mapper.map('n', '<leader>P', ':MarkdownPreview<CR>', { silent = true, noremap = true }, 'Markdown', 'md_preview', 'Display Markdown preview in Qutebrowser')
+--
+-- -- For Neovim >= 0.7.0
+-- Mapper.map({ 'i', 's' }, '<c-k>', function()
+--   if ls.expand_or_jumpable() then
+--     ls.expand_or_jump(1)
+--   end
+-- end, { silent = true }, 'Snippets', 'snippet_jump_or_expand', 'Expand or jump to next snippet placeholder')
+-- return {}
+
 local harpoon = require 'harpoon'
--- TELESCOPE {{{
 local telescope = require 'telescope.builtin'
 
 -- Slightly advanced example of overriding default behavior and theme
@@ -24,10 +46,8 @@ end, { desc = 'search in open files' })
 vim.keymap.set('n', '<leader>sn', function()
   telescope.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = 'search neovim config' })
--- }}}
-
--- WHICHKEY {{{
-return {
+local wk = require 'which-key'
+local binds = {
   ['<leader>'] = { telescope.git_files, 'search git files' },
   ['1'] = {
     function()
@@ -169,14 +189,36 @@ return {
     ['odo'] = { '<cmd>:e /home/skogix/org/todo.md<cr>', 'todo' },
     ['oado'] = { '<cmd>:e /home/skogix/org/todo.md<cr>', 'todo' },
   },
+  -- neorg
   w = {
-    name = 'wiki',
-    w = { '<cmd>VimwikiIndex<cr><cmd>VimwikiGenerateLinks<cr><cmd>VimwikiGenerateTagLinks<cr>', 'wiki' },
-    u = { '<cmd>VimwikiMakeDiaryNote<cr>', 'update todays diary' },
-    i = { '<cmd>VimwikiDiaryIndex<cr><cmd>VimwikiDiaryGenerateLinks<cr>', 'diary index' },
-    n = { '<cmd>VimwikiGoto<cr>', 'new note' },
-    s = { '<cmd>Telescope vimwiki<cr>', 'search' }, -- create a binding with label
-    f = { name = 'file', r = { '<cmd>VimwikiRenameFile<cr>', 'rename' }, d = { '<cmd>VimwikiDeleteFile<cr>', 'delete' } },
+    name = 'neorg',
+    w = { '<cmd>Neorg index<cr>', 'wiki' },
+    n = { '<cmd>Neorg keybind norg core.dirman.new.note<cr>', 'new note' },
+    ['/'] = { '<cmd>Neorg keybind norg core.integrations.telescope.find_linkable<cr>', 'new note' },
+    ['<leader>'] = { '<cmd>Neorg keybind norg<cr>', 'keybinds' },
+    -- x = { '<cmd>Neorg keybind norg core.integrations.telescope.find_norg_files<cr>', 'find linkable' },
+    -- x = { '<cmd>Neorg keybind norg core.integrations.telescope.insert_link<cr>', '' },
+    -- x = { '<cmd>Neorg keybind norg core.integrations.telescope.insert_file_link<cr>', '' },
+    -- x = { '<cmd>Neorg keybind norg core.itero.next-iteration<cr>', '[enter]next iteration' },
+    -- x = { '<cmd>Neorg keybind norg core.integrations.telescope.<cr>', '' },
+    -- x = { '<cmd>Neorg keybind norg core.integrations.telescope.<cr>', '' },
+    -- x = { '<cmd>Neorg keybind norg core.integrations.telescope.<cr>', '' },
   },
+  -- vimwiki:
+  -- w = {
+  --   name = 'wiki',
+  --   w = { '<cmd>VimwikiIndex<cr><cmd>VimwikiGenerateLinks<cr><cmd>VimwikiGenerateTagLinks<cr>', 'wiki' },
+  --   u = { '<cmd>VimwikiMakeDiaryNote<cr>', 'update todays diary' },
+  --   i = { '<cmd>VimwikiDiaryIndex<cr><cmd>VimwikiDiaryGenerateLinks<cr>', 'diary index' },
+  --   n = { '<cmd>VimwikiGoto<cr>', 'new note' },
+  --   s = { '<cmd>Telescope vimwiki<cr>', 'search' }, -- create a binding with label
+  --   f = { name = 'file', r = { '<cmd>VimwikiRenameFile<cr>', 'rename' }, d = { '<cmd>VimwikiDeleteFile<cr>', 'delete' } },
+  -- },
 }
--- }}}
+local opts = {
+  prefix = '<leader>',
+}
+
+-- local binds = require 'skogix.mappings'
+
+wk.register(binds, opts)
