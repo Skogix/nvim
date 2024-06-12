@@ -1,5 +1,5 @@
 return {
-  'ribelo/taskwarrior.nvim',
+  'skogix/taskwarrior.nvim',
   opts = {
     -- require('taskwarrior_nvim').browser { 'ready' },
     filter = { 'noice', 'nofile' }, -- Filtered buffer_name and buffer_type.
