@@ -13,11 +13,11 @@ return {
   -- ft = 'norg',
   opts = {
     load = {
-      ['core.defaults'] = {}, -- Loads default behaviour
-      ['core.summary'] = {}, -- Loads default behaviour
-      ['core.export'] = {}, -- Loads default behaviour
+      ['core.defaults'] = {},        -- Loads default behaviour
+      ['core.summary'] = {},         -- Loads default behaviour
+      ['core.export'] = {},          -- Loads default behaviour
       ['core.export.markdown'] = {}, -- Loads default behaviour
-      ['core.concealer'] = {}, -- Adds pretty icons to your documents
+      ['core.concealer'] = {},       -- Adds pretty icons to your documents
       ['core.keybinds'] = {
         config = {
           default_keybinds = false,
@@ -58,28 +58,28 @@ return {
             keybinds.map_event_to_mode('norg', {
               n = {
                 -- Switches the task under the cursor between a select few states
-                { '<C-Space>', 'core.qol.todo_items.todo.task_cycle', opts = { desc = '[neorg] Cycle Task' } },
+                { '<C-Space>', 'core.qol.todo_items.todo.task_cycle',         opts = { desc = '[neorg] Cycle Task' } },
 
                 -- Creates a new .norg file to take notes in
                 -- { leader .. 'c', 'core.dirman.new.note', opts = { desc = '[neorg] create new note' } },
-                { 'ss', 'core.integrations.telescope.find_norg_files', opts = { desc = '[neorg] search neorg files' } },
+                { 'ss',        'core.integrations.telescope.find_norg_files', opts = { desc = '[neorg] search neorg files' } },
                 -- { 'ss', 'core.integrations.telescope.find_norg_files', opts = { desc = '[neorg] search neorg files' } },
 
                 -- Hop to the destination of the link under the cursor
-                { '<CR>', 'core.esupports.hop.hop-link', opts = { desc = '[neorg] Jump to Link' } },
-                { 'gd', 'core.esupports.hop.hop-link', opts = { desc = '[neorg] Jump to Link' } },
-                { 'gf', 'core.esupports.hop.hop-link', opts = { desc = '[neorg] Jump to Link' } },
-                { 'gF', 'core.esupports.hop.hop-link', opts = { desc = '[neorg] Jump to Link' } },
+                { '<CR>',      'core.esupports.hop.hop-link',                 opts = { desc = '[neorg] Jump to Link' } },
+                { 'gd',        'core.esupports.hop.hop-link',                 opts = { desc = '[neorg] Jump to Link' } },
+                { 'gf',        'core.esupports.hop.hop-link',                 opts = { desc = '[neorg] Jump to Link' } },
+                { 'gF',        'core.esupports.hop.hop-link',                 opts = { desc = '[neorg] Jump to Link' } },
 
                 -- Same as `<CR>`, except opens the destination in a vertical split
-                { '<C-CR>', 'core.esupports.hop.hop-link', 'vsplit', opts = { desc = '[neorg] Jump to Link (Vertical Split)' } },
+                { '<C-CR>',    'core.esupports.hop.hop-link',                 'vsplit',                                                    opts = { desc = '[neorg] Jump to Link (Vertical Split)' } },
 
                 -- Promote
-                { '>.', 'core.promo.promote', opts = { desc = '[neorg] Promote Object (Non-Recursively)' } },
-                { '<,', 'core.promo.demote', opts = { desc = '[neorg] Demote Object (Non-Recursively)' } },
+                { '>.',        'core.promo.promote',                          opts = { desc = '[neorg] Promote Object (Non-Recursively)' } },
+                { '<,',        'core.promo.demote',                           opts = { desc = '[neorg] Demote Object (Non-Recursively)' } },
 
-                { '>>', 'core.promo.promote', 'nested', opts = { desc = '[neorg] Promote Object (Recursively)' } },
-                { '<<', 'core.promo.demote', 'nested', opts = { desc = '[neorg] Demote Object (Recursively)' } },
+                { '>>',        'core.promo.promote',                          'nested',                                                    opts = { desc = '[neorg] Promote Object (Recursively)' } },
+                { '<<',        'core.promo.demote',                           'nested',                                                    opts = { desc = '[neorg] Demote Object (Recursively)' } },
 
                 -- { leader .. 'lt', 'core.pivot.toggle-list-type', opts = { desc = '[neorg] Toggle (Un)ordered List' } },
                 -- { leader .. 'li', 'core.pivot.invert-list-type', opts = { desc = '[neorg] Invert (Un)ordered List' } },
@@ -88,8 +88,8 @@ return {
               },
 
               i = {
-                { '<C-t>', 'core.promo.promote', opts = { desc = '[neorg] Promote Object (Recursively)' } },
-                { '<C-d>', 'core.promo.demote', opts = { desc = '[neorg] Demote Object (Recursively)' } },
+                { '<C-t>', 'core.promo.promote',                  opts = { desc = '[neorg] Promote Object (Recursively)' } },
+                { '<C-d>', 'core.promo.demote',                   opts = { desc = '[neorg] Demote Object (Recursively)' } },
                 -- { '<C-CR>', 'core.itero.next-iteration', '<CR>', opts = { desc = '[neorg] Continue Object' } },
                 { '<M-d>', 'core.tempus.insert-date-insert-mode', opts = { desc = '[neorg] Insert Date' } },
               },
@@ -141,13 +141,13 @@ return {
             -- Map the below keys on presenter mode
             keybinds.map_event_to_mode('presenter', {
               n = {
-                { '<CR>', 'core.presenter.next_page', opts = { desc = '[neorg] Next Page' } },
-                { 'l', 'core.presenter.next_page', opts = { desc = '[neorg] Next Page' } },
-                { 'h', 'core.presenter.previous_page', opts = { desc = '[neorg] Previous Page' } },
+                { '<CR>',  'core.presenter.next_page',     opts = { desc = '[neorg] Next Page' } },
+                { 'l',     'core.presenter.next_page',     opts = { desc = '[neorg] Next Page' } },
+                { 'h',     'core.presenter.previous_page', opts = { desc = '[neorg] Previous Page' } },
 
                 -- Keys for closing the current display
-                { 'q', 'core.presenter.close', opts = { desc = '[neorg] Close Presentation' } },
-                { '<Esc>', 'core.presenter.close', opts = { desc = '[neorg] Close Presentation' } },
+                { 'q',     'core.presenter.close',         opts = { desc = '[neorg] Close Presentation' } },
+                { '<Esc>', 'core.presenter.close',         opts = { desc = '[neorg] Close Presentation' } },
               },
             }, {
               silent = true,
@@ -158,7 +158,7 @@ return {
             -- Apply the below keys to all modes
             keybinds.map_to_mode('all', {
               n = {
-                { leader .. 'm', '', opts = { desc = '[neorg] Norg Mode' } },
+                { leader .. 'm',  '',                         opts = { desc = '[neorg] Norg Mode' } },
                 { leader .. 'mn', '<cmd>Neorg mode norg<CR>', opts = { desc = '[neorg] Enter Norg Mode' } },
                 {
                   leader .. 'mh',
@@ -178,7 +178,7 @@ return {
             })
           end,
         },
-      }, -- Adds default keybindings
+      },                         -- Adds default keybindings
       ['core.ui.calendar'] = {}, -- Adds default keybindings
       ['core.completion'] = {
         config = {
@@ -188,7 +188,7 @@ return {
       ['core.integrations.nvim-cmp'] = {},
       ['core.integrations.telescope'] = {},
       ['core.journal'] = {}, -- Enables support for the journal module
-      ['core.dirman'] = { -- Manages Neorg workspaces
+      ['core.dirman'] = {    -- Manages Neorg workspaces
         config = {
           workspaces = {
             skogix = '/home/skogix/org/neorg/skogix',
