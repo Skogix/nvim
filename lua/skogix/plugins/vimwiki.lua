@@ -10,11 +10,11 @@ return {
     init = function()
       -- vim.g.vimwiki_folding = 'custom'
       -- vim.g.vimwiki_folding = 'list'
-      vim.g.vimwiki_ext2syntax = {
-        ['.md'] = 'markdown',
-        ['.markdown'] = 'markdown',
-        ['.mdown'] = 'markdown',
-      }
+      -- vim.g.vimwiki_ext2syntax = {
+      --   ['.md'] = 'markdown',
+      --   ['.markdown'] = 'markdown',
+      --   ['.mdown'] = 'markdown',
+      -- }
       vim.g.vimwiki_key_mappings = {
         all_maps = 0,
         global = 0,
@@ -47,7 +47,7 @@ return {
       -- vim.g.vimwiki_ext2syntax = {}
       -- vim.g.vimwiki_global_ext = 0
     end,
-    config = function() end,
+    -- config = function() end,
   },
   -- {
   --   'tools-life/taskwiki',

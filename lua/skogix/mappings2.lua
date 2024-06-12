@@ -58,7 +58,7 @@ whichkey.register({
   l = { name = 'lsp' },
   d = { name = 'debug' },
   T = { '<cmd>ToggleTerm direction=float<cr>', 'ToggleTerm' },
-  t = { '<cmd>:TodoTelescope cwd=~/org/neorg<cr>', 'TODO' },
+  -- t = { '<cmd>:TodoTelescope cwd=~/org/neorg<cr>', 'TODO' },
   m = { name = 'macro/markdown' },
   -- n = { name = 'notifications' },
   ['<tab>'] = { name = 'tabs' },
