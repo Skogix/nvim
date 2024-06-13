@@ -1,23 +1,22 @@
-
-
-require 'options'
-require 'keymaps'
-require 'autocommands'
-require 'package-manager'
-require('lazy').setup({
-  -- {'neovim/nvim-lspconfig'},
-  require 'skogix/lspconfig',
-  require 'skogix/colorscheme',
-  require 'skogix/treesitter',
-  require 'skogix/plugins/cmp',
-  require 'skogix/plugins/telescope',
-
-  -- require 'skogix/plugins/neo-tree',
+require 'plugins/options'
+require 'plugins/keymaps'
+require 'plugins/autocommands'
+require 'plugins/package-manager'
+require("lazy").setup({
+  require 'plugins/neoconf',
+  { "folke/which-key.nvim", lazy = true },
+  require 'plugins/lspconfig',
+  require 'plugins/colorscheme',
+  require 'plugins/treesitter',
+  require 'plugins/vim-startuptime',
+    { "nvim-tree/nvim-web-devicons", lazy = true },
+  require 'plugins/lazydev',
+  --require 'plugins/',
+  require 'plugins/cmp',
+  require 'plugins/telescope',
+  require 'plugins/neo-tree',
 }, {})
-  -- { import = 'skogix.plugins' }
--- require 'plugins'
--- [[ skogix mappings ]]
--- require 'skogix.mappings2'
 
--- The line beneath this is called `modeline`. See `:help modeline`
--- vim: ts=2 sts=2 sw=2 et
+-- dotnet
+-- luarocks luaformatter
+-- nginx-python3
