@@ -1,8 +1,10 @@
 return {
   "folke/neoconf.nvim",
   cmd = "Neoconf",
-  lazy = false,
+  config = true,
+  --lazy = false,
   opts = {
+    --require("neoconf").setup(),
     -- name of the local settings files
     local_settings = ".neoconf.json",
     -- name of the global settings file in your Neovim config directory
@@ -24,7 +26,7 @@ return {
       -- - global json settings
       -- - local json settings
       lspconfig = {
-        enabled = true,
+        enabled = false,
       },
       -- configures jsonls to get completion in .nvim.settings.json files
       jsonls = {

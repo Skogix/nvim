@@ -27,7 +27,7 @@ return {
   opts = {
     library = {
       -- Library paths can be absolute
-      "~/projects/my-awesome-lib",
+      "~/skx",
       -- Or relative, which means they will be resolved from the plugin dir.
       "lazy.nvim",
       "luvit-meta/library",
@@ -48,8 +48,8 @@ return {
       return vim.g.lazydev_enabled == nil and true or vim.g.lazydev_enabled
     end,
     -- disable when a .luarc.json file is found
-    enabled = function(root_dir)
-      return not vim.uv.fs_stat(root_dir .. "/.luarc.json")
-    end,
+    -- enabled = function(root_dir)
+    --   return not vim.uv.fs_stat(root_dir .. "/.luarc.json")
+    -- end,
   },
 }

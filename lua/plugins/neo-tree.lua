@@ -4,7 +4,7 @@
 return {
   'nvim-neo-tree/neo-tree.nvim',
   keys = {
-{ "<leader>", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
+{ "<leader>e", "<cmd>Neotree toggle<cr>", desc = "NeoTree" },
   },
   -- branch = 'v3.x',
   dependencies = {
