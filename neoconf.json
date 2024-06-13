@@ -3368,6 +3368,25 @@
   "sponsor": {
     "url": "https://github.com/LuaLS/lua-language-server/issues/484"
   },
-  "version": "3.9.3"
+  "neodev": {
+    "library": {
+      "enabled": true,
+      "plugins": [
+        "nvim-lspconfig",
+        "lsp"
+      ]
+    }
+  },
+  "neoconf": {
+    "plugins": {
+      "lua_ls": {
+        "enabled": true
+      }
+    }
+  },
+  "lspconfig": {
+    "lua_ls": {
+      "Lua.completion.callSnippet": "Replace"
+    }
+  }
 }
-
