@@ -26,7 +26,6 @@ return {
     },
   },
 
-  ---@type Ollama.Config
   opts = {
     model = 'deepseek-coder',
     -- model = 'codestral',
