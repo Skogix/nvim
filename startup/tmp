@@ -4305,6 +4305,54 @@ times in msec
 039.274  000.033  000.033: require('luarocks-nvim.utils')
 039.300  000.149  000.116: require('luarocks-nvim.paths')
 039.366  000.029  000.029: require('luarocks-nvim.notify')
+local rocks_config = 0
+    rocks_path = vim.env.HOME .. "/.local/share/nvim/rocks",
+}
+
+vim.g.rocks_nvim = rocks_config
+
+local luarocks_path = {
+    vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?.lua"),
+    vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?", "init.lua"),
+}
+package.path = package.path .. ";" .. table.concat(luarocks_path, ";")
+
+local luarocks_cpath = {
+    vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.so"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.so"),
+    -- Remove the dylib and dll paths if you do not need macos or windows support
+    vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.dylib"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.dylib"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.dll"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.dll"),
+}
+package.cpath = package.cpath .. ";" .. table.concat(luarocks_cpath, ";")
+
+vim.opt.runtimepath:append(vim.fs.joinpath(rocks_config.rocks_path, "lib", "luarocks", "rocks-5.1", "*", "*"))
+local rocks_config = 0
+    rocks_path = vim.env.HOME .. "/.local/share/nvim/rocks",
+}
+
+vim.g.rocks_nvim = rocks_config
+
+local luarocks_path = {
+    vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?.lua"),
+    vim.fs.joinpath(rocks_config.rocks_path, "share", "lua", "5.1", "?", "init.lua"),
+}
+package.path = package.path .. ";" .. table.concat(luarocks_path, ";")
+
+local luarocks_cpath = {
+    vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.so"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.so"),
+    -- Remove the dylib and dll paths if you do not need macos or windows support
+    vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.dylib"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.dylib"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib", "lua", "5.1", "?.dll"),
+    vim.fs.joinpath(rocks_config.rocks_path, "lib64", "lua", "5.1", "?.dll"),
+}
+package.cpath = package.cpath .. ";" .. table.concat(luarocks_cpath, ";")
+
+vim.opt.runtimepath:append(vim.fs.joinpath(rocks_config.rocks_path, "lib", "luarocks", "rocks-5.1", "*", "*"))
 039.367  000.066  000.038: require('luarocks-nvim.rocks')
 039.415  000.047  000.047: require('luarocks-nvim.build')
 039.417  000.579  000.316: require('luarocks-nvim')
