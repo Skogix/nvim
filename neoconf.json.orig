@@ -12,12 +12,21 @@
     "plugins": {
       "lua_ls": {
         "enabled": true
+<<<<<<< HEAD
       },
+=======
+      }
+>>>>>>> 0.5-new-beginnings
     }
   },
   "lspconfig": {
     "lua_ls": {
+<<<<<<< HEAD
       "Lua.completion.callSnippet": "Replace",
     },
+=======
+      "Lua.completion.callSnippet": "Replace"
+    }
+>>>>>>> 0.5-new-beginnings
   }
 }
