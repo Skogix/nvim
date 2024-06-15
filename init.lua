@@ -2,8 +2,8 @@
 
 require 'plugins/options'
 require 'plugins/keymaps'
---require 'plugins/autocommands'
---require 'plugins/package-manager'
+require 'plugins/autocommands'
+require 'plugins/package-manager'
 --require("lazy").setup({
   --require 'plugins/lspconfig',
   --require 'plugins/neorg',
