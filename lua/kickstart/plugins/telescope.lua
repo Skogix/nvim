@@ -9,7 +9,7 @@ return {
   { -- Fuzzy Finder (files, lsp, etc)
     'nvim-telescope/telescope.nvim',
     -- event = 'VimEnter',
-    branch = '*',
+    -- branch = '*',
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope-project.nvim',
@@ -31,7 +31,7 @@ return {
       { 'zk-org/zk-nvim' },
       { 'nvim-telescope/telescope-ui-select.nvim' },
       { 'ElPiloto/telescope-vimwiki.nvim' },
-      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
       { 'nvim-lua/popup.nvim' },
       { 'debugloop/telescope-undo.nvim' },
       { 'nvim-telescope/telescope-github.nvim' },
