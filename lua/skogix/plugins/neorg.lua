@@ -193,6 +193,7 @@ return {
           workspaces = {
             skogix = '/home/skogix/org/neorg/skogix',
             work = '/home/skogix/org/neorg/work',
+            nvim = '/home/skogix/.config/skogix'
           },
           index = 'index.norg',
           default_workspace = 'skogix',
