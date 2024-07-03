@@ -1,7 +1,7 @@
 return {
   'skogix/m_taskwarrior_d.nvim',
-  version = '*',
-  branch = 'develop',
+  -- version = '*',
+  branch = 'main',
   dependencies = { 'MunifTanjim/nui.nvim' },
   config = function()
     -- Require
